@@ -11,6 +11,7 @@ namespace WepApi_1.Controllers
     public class ColorsController : ApiController
     {
         [HttpGet, Route("colors/{color:enum(WepApi_1.Models.ColorsEnum)}")]
+        //[HttpGet, Route("colors/{color:enum(WepApi_1.Controllers.ColorsController+ColorsEnum)}")]
         public string GetColor(ColorsEnum color)
         //public string GetColor(string color)
         {
