@@ -31,6 +31,16 @@ namespace WepApi_1.Controllers
             return $"product-" + id;
         }
 
+        // GET: api/Products/status/a
+        //[HttpGet, Route("status/{status:alpha?}")] -- Making status optional
+        //[HttpGet, Route("status/{status:alpha=}")] -- Passing null value as default
+        [HttpGet, Route("status/{status:alpha=pending}/{id:int=1}")]
+        //public string GetProductsWithStatus(string status = null)
+        public string GetProductsWithStatus(string status, int id)
+        {
+            return string.IsNullOrEmpty(status)?"NULL": status;
+        }
+
 
         // GET: api/Products/5/orders/custid
         [HttpGet, Route("{id:int:range(1000,3000)}/orders/{custid}")]
