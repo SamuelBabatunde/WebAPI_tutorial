@@ -28,7 +28,7 @@ namespace WepApi_1.Controllers
 
         public string Get(int id)
         {
-            return $"product";
+            return $"product-" + id;
         }
 
 
