@@ -15,7 +15,7 @@ namespace WepApi_1.Controllers
         // GET: api/Products
 
         [HttpGet, Route("")]
-        [AcceptVerbs("GET","VIEW")]
+        [AcceptVerbs("GET","VIEW","BREW")]
         [Route("~/prods")]
 
         public IEnumerable<string> Get()
