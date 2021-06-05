@@ -19,12 +19,8 @@ namespace WepApi_1
             var constraintResolverConfig = new DefaultInlineConstraintResolver();
 
             constraintResolverConfig.ConstraintMap.Add("validAccount", typeof(AccountNumberConstraint));
-           // config.MapHttpAttributeRoutes(constraintResolverConfig);
-
-
-
-            //var constraintResolver = new DefaultInlineConstraintResolver();
             constraintResolverConfig.ConstraintMap.Add("enum", typeof(EnumConstraint));
+            constraintResolverConfig.ConstraintMap.Add("base64", typeof(Base64Constraint));
             config.MapHttpAttributeRoutes(constraintResolverConfig);
 
             //  config.Routes.MapHttpRoute(
